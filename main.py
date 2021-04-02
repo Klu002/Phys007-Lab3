@@ -35,7 +35,8 @@ def print_stats(file):
     print("==="+file+"===")
     long_heavy = []
     for i in range(1, 4):
-        df = get_accelerometer_info('Data/' + file + str(i) + '.csv')
+        # Might have to change file path to /Data/
+        df = get_accelerometer_info('Phys007-Lab3/Data/' + file + str(i) + '.csv')
         long_heavy.append(calculate_first_period(df))
     print(long_heavy)
     print("avg: " + str(np.average(long_heavy)))
